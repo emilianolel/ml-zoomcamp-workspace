@@ -1,136 +1,153 @@
-## Homework
+## Homework 📝💻
 
-### Set up the environment
+### Set up the environment ⚙️🚀
 
-You need to install Python, NumPy, Pandas, Matplotlib and Seaborn. For that, you can the instructions from
-[06-environment.md](../../../01-intro/06-environment.md).
+Ready to dive into data science? First, you'll need to install the right tools! Make sure you have **Python**, **NumPy**, **Pandas**, **Matplotlib**, and **Seaborn** in your environment. 📦 You can follow the instructions from the [environment setup guide](../../../01-intro/06-environment.md) to get everything ready. 🖥️💪
 
-### Q1. Pandas version
+### Q1. Pandas Version 🐼🔍
 
-What's the version of Pandas that you installed?
-
-You can get the version information using the `__version__` field:
+What version of **Pandas** do you have installed? You can check it easily with the following command:
 
 ```python
+import pandas as pd
 pd.__version__
 ```
 
-Answer:
+**Answer:**  
 ```
 2.2.2
 ```
 
-![pandas version](../../assets/01-intro/01_pandas_version.png 'pandas version')
+![Pandas version](../../assets/01-intro/01_pandas_version.png 'pandas version')  
+🔧 It's crucial to keep your tools up-to-date!
 
-### Getting the data 
+---
 
-For this homework, we'll use the Laptops Price dataset. Download it from 
-[here](https://raw.githubusercontent.com/alexeygrigorev/datasets/master/laptops.csv).
+### Getting the Data 💾📊
 
-You can do it with wget:
+For this homework, we're working with the **Laptops Price Dataset**. 💻 Want to get started? You can grab the dataset directly:
 
+[Download Laptops Price Dataset](https://raw.githubusercontent.com/alexeygrigorev/datasets/master/laptops.csv) 📥
+
+Or, if you're feeling fancy, you can use the command line:  
 ```bash
 wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/laptops.csv
 ```
 
-Or just open it with your browser and click "Save as...".
-
-Now read it with Pandas.
-
+Once you've got the data, let's load it up using **Pandas**:  
 ```python
 laptops_df = pd.read_csv('data/laptops.csv')
-```
-```python
 laptops_df.head()
 ```
 
-|      | Laptop                                                                                                                            | Status      | Brand            | Model          | CPU                   |   RAM |   Storage | Storage type   | GPU                |   Screen | Touch   |   Final Price |
-|-----:|:----------------------------------------------------------------------------------------------------------------------------------|:------------|:-----------------|:---------------|:----------------------|------:|----------:|:---------------|:-------------------|---------:|:--------|--------------:|
-|    0 | ASUS ExpertBook B1 B1502CBA-EJ0436X Intel Core i5-1235U/8GB/512GB SSD/15.6"                                                       | New         | Asus             | ExpertBook     | Intel Core i5         |     8 |       512 | SSD            | nan                |    15.6  | No      |       1009    |
-|    1 | Alurin Go Start Intel Celeron N4020/8GB/256GB SSD/15.6"                                                                           | New         | Alurin           | Go             | Intel Celeron         |     8 |       256 | SSD            | nan                |    15.6  | No      |        299    |
-|    2 | ASUS ExpertBook B1 B1502CBA-EJ0424X Intel Core i3-1215U/8GB/256GB SSD/15.6"                                                       | New         | Asus             | ExpertBook     | Intel Core i3         |     8 |       256 | SSD            | nan                |    15.6  | No      |        789    |
-|    3 | MSI Katana GF66 12UC-082XES Intel Core i7-12700H/16GB/1TB SSD/RTX3050/15.6"                                                       | New         | MSI              | Katana         | Intel Core i7         |    16 |      1000 | SSD            | RTX 3050           |    15.6  | No      |       1199    |
-|    4 | HP 15S-FQ5085NS Intel Core i5-1235U/16GB/512GB SSD/15.6"                                                                          | New         | HP               | 15S            | Intel Core i5         |    16 |       512 | SSD            | nan                |    15.6  | No      |        669.01 |
-|    5 | MSI Crosshair 17 C12VF-264XES Intel Core i7-12650H/32GB/1TB SSD/RTX 4060/17.3"                                                    | New         | MSI              | Crosshair      | Intel Core i7         |    32 |      1000 | SSD            | RTX 4060           |    17.3  | No      |       1699    |
-|    6 | Lenovo Thinkpad E14 Gen 4 AMD Ryzen 5 5625U/8GB/256GB SSD/14"                                                                     | New         | Lenovo           | ThinkPad       | AMD Ryzen 5           |     8 |       256 | SSD            | nan                |    14    | No      |        909    |
-|    7 | ASUS VivoBook 15 F515JA-EJ2882W Intel Core i7-1065G7/8GB/512GB SSD/15.6"                                                          | New         | Asus             | VivoBook       | Intel Core i7         |     8 |       512 | SSD            | nan                |    15.6  | No      |        809.01 |
-|    8 | Medion Akoya E15415 Intel Core i5-10210U/8GB/256GB SSD/15.6"                                                                      | New         | Medion           | Akoya          | Intel Core i5         |     8 |       256 | SSD            | nan                |    15.6  | No      |        519    |
-|    9 | HP Victus 16-d1038ns Intel Core i7-12700H/16GB/512GB SSD/RTX 3050/16.1"                                                           | New         | HP               | Victus         | Intel Core i7         |    16 |       512 | SSD            | RTX 3050           |    16.1  | No      |       1149    |
-|   10 | Lenovo V15 IGL Intel Celeron N4020/8GB/256 GB SSD/15.6"                                                                           | New         | Lenovo           | V15            | Intel Celeron         |     8 |       256 | SSD            | nan                |    15.6  | No      |        349    |
+Take a look at the first few rows 👀:
 
-![read_csv](../../assets/01-intro/02_read_csv.png 'read_csv')
+|      | Laptop                                                                 | Status  | Brand | Model | CPU | RAM | Storage | Storage type | GPU | Screen | Touch | Final Price |
+|-----:|:-----------------------------------------------------------------------|:--------|:------|:------|:----|----:|--------:|:-------------|:----|-------:|:------|------------:|
+| 0    | ASUS ExpertBook B1 B1502CBA-EJ0436X Intel Core i5-1235U/8GB/512GB SSD/15.6" | New     | Asus  | ExpertBook | Intel Core i5 | 8 | 512 | SSD | NaN | 15.6 | No | 1009 |
+| 1    | Alurin Go Start Intel Celeron N4020/8GB/256GB SSD/15.6"                 | New     | Alurin | Go   | Intel Celeron | 8 | 256 | SSD | NaN | 15.6 | No | 299 |
+| ...  | ...                                                                     | ...     | ...   | ...   | ... | ... | ...     | ...           | ... | ...    | ...   | ...         |
 
-### Q2. Records count
+![Read CSV](../../assets/01-intro/02_read_csv.png 'read_csv')  
+📊 Let's get that data ready for analysis!
 
-How many records are in the dataset?
+---
 
-- 2160
+### Q2. Records Count 📋🔢
 
-![records count](../../assets/01-intro/03_df_rows.png 'records count')
+How many records are in the dataset? 🤔
 
-### Q3. Laptop brands
+- **2160** 🎉
 
-How many laptop brands are presented in the dataset?
+![Records Count](../../assets/01-intro/03_df_rows.png 'records count')  
+That's a lot of laptops to explore! 🔍💼
 
-- 27
+---
 
-![brands](../../assets/01-intro/04_brands.png 'brands')
+### Q3. Laptop Brands 🏷️💡
 
-### Q4. Missing values
+How many different laptop brands are represented in this dataset? 🌍
 
-How many columns in the dataset have missing values?
+- **27** 👏
 
-- 3
+![Brands](../../assets/01-intro/04_brands.png 'brands')  
+Wow, a broad selection of brands! Which one’s your favorite? 😎
 
-![missing values](../../assets/01-intro/05_missing_values.png 'missing values')
+---
 
-### Q5. Maximum final price
+### Q4. Missing Values ⚠️❓
 
-What's the maximum final price of Dell notebooks in the dataset?
+How many columns have missing values? 🧐
 
-- 3936
+- **3** 🚨
 
-|      | Laptop                                                                       | Status   | Brand   | Model     | CPU           |   RAM |   Storage | Storage type   | GPU       |   Screen | Touch   |   Final Price |
-|-----:|:-----------------------------------------------------------------------------|:---------|:--------|:----------|:--------------|------:|----------:|:---------------|:----------|---------:|:--------|--------------:|
-| 1335 | Dell Precision 5770 Intel Core i7-12700H/16GB/512GB SSD/RTX A2000/17" Táctil | New      | Dell    | Precision | Intel Core i7 |    16 |       512 | SSD            | RTX A2000 |       17 | Yes     |          3936 |
+![Missing Values](../../assets/01-intro/05_missing_values.png 'missing values')  
+It's important to handle those missing values to avoid skewed results. 🔧
 
-![max final price](../../assets/01-intro/06_max_final_price.png 'max final price')
+---
 
-### Q6. Median value of Screen
+### Q5. Maximum Final Price 💰💻
 
-1. Find the median value of `Screen` column in the dataset. `15.6`
-2. Next, calculate the most frequent value of the same `Screen` column. `15.6`
-3. Use `fillna` method to fill the missing values in `Screen` column with the most frequent value from the previous step. `15.6`
-4. Now, calculate the median value of `Screen` once again. `15.6`
+What’s the maximum final price for a **Dell** laptop in the dataset? 🤑
 
-Has it changed?
+- **3936**
 
-> Hint: refer to existing `mode` and `median` functions to complete the task.
+Check out the details on this high-end Dell:
 
-- No
+|      | Laptop                                | Status  | Brand | Model     | CPU           | RAM  | Storage | Storage Type | GPU       | Screen | Touch | Final Price |
+|-----:|:--------------------------------------|:--------|:------|:----------|:--------------|-----:|--------:|:-------------|:----------|-------:|:------|------------:|
+| 1335 | Dell Precision 5770 Intel Core i7-12700H | New     | Dell  | Precision | Intel Core i7 | 16  | 512    | SSD          | RTX A2000 | 17     | Yes   | 3936        |
 
-![median](../../assets/01-intro/07_median.png 'median')
+![Max Final Price](../../assets/01-intro/06_max_final_price.png 'max final price')  
+Dell means business! 💼💪
 
-### Q7. Sum of weights
+---
 
-1. Select all the "Innjoo" laptops from the dataset.
-2. Select only columns `RAM`, `Storage`, `Screen`.
-3. Get the underlying NumPy array. Let's call it `X`.
-4. Compute matrix-matrix multiplication between the transpose of `X` and `X`. To get the transpose, use `X.T`. Let's call the result `XTX`.
-5. Compute the inverse of `XTX`.
-6. Create an array `y` with values `[1100, 1300, 800, 900, 1000, 1100]`.
-7. Multiply the inverse of `XTX` with the transpose of `X`, and then multiply the result by `y`. Call the result `w`.
-8. What's the sum of all the elements of the result?
+### Q6. Median Value of Screen Size 📏🖥️
 
-> **Note**: You just implemented linear regression. We'll talk about it in the next lesson.
+1. First, calculate the **median** value of the `Screen` column:  
+   - **15.6** 📐  
+2. Next, what’s the most frequent screen size (**mode**)?  
+   - **15.6** 📊  
+3. Now, fill in missing values in the `Screen` column with the mode value:  
+   - **15.6** 🔧  
+4. Recalculate the median. Did it change?  
+   - **Nope!** 🔁
 
-- 91.30
+![Median](../../assets/01-intro/07_median.png 'median')  
+Consistency is key! 🔑
 
-![sum of weights 01](../../assets/01-intro/08.1_lin_reg.png 'sum of weights 01')
+---
 
-![sum of weights 02](../../assets/01-intro/08.2_lin_reg.png 'sum of weights 02')
+### Q7. Sum of Weights (Linear Regression) ➗📈
 
-## Submit the results
+Here comes some math! Let's implement a **linear regression** model. 🔢🧠
 
-* Submit your results here: https://courses.datatalks.club/ml-zoomcamp-2024/homework/hw01
-* If your answer doesn't match options exactly, select the closest one
+Steps:  
+1. Filter out all the **Innjoo** laptops.  
+2. Select the columns `RAM`, `Storage`, `Screen`.  
+3. Convert them to a NumPy array, `X`.  
+4. Perform matrix-matrix multiplication to compute `XTX`.  
+5. Compute the inverse of `XTX`.  
+6. Create an array `y` with values [1100, 1300, 800, 900, 1000, 1100].  
+7. Multiply the inverse of `XTX` with the transpose of `X`, then multiply that result by `y` to get `w`.  
+8. Finally, sum the elements of `w`.
+
+**Answer:**  
+- **91.30** 💯
+
+![Sum of Weights 01](../../assets/01-intro/08.1_lin_reg.png 'sum of weights 01')  
+![Sum of Weights 02](../../assets/01-intro/08.2_lin_reg.png 'sum of weights 02')  
+Boom! You've just implemented **linear regression**. 🎉📉
+
+---
+
+## Submit Your Results 📤🚀
+
+Submit your results here:  
+[Submit Homework](https://courses.datatalks.club/ml-zoomcamp-2024/homework/hw01) 🔗
+
+**Pro tip:** If your answer doesn’t match exactly, choose the closest one. ✅
+
+Good luck, and happy coding! 💻🤓🚀
+
