@@ -20,6 +20,8 @@ Answer:
 2.2.2
 ```
 
+![pandas version](../../assets/01-intro/01_pandas_version.png 'pandas version')
+
 ### Getting the data 
 
 For this homework, we'll use the Laptops Price dataset. Download it from 
@@ -56,11 +58,15 @@ laptops_df.head()
 |    9 | HP Victus 16-d1038ns Intel Core i7-12700H/16GB/512GB SSD/RTX 3050/16.1"                                                           | New         | HP               | Victus         | Intel Core i7         |    16 |       512 | SSD            | RTX 3050           |    16.1  | No      |       1149    |
 |   10 | Lenovo V15 IGL Intel Celeron N4020/8GB/256 GB SSD/15.6"                                                                           | New         | Lenovo           | V15            | Intel Celeron         |     8 |       256 | SSD            | nan                |    15.6  | No      |        349    |
 
+![read_csv](../../assets/01-intro/02_read_csv.png 'read_csv')
+
 ### Q2. Records count
 
 How many records are in the dataset?
 
 - 2160
+
+![records count](../../assets/01-intro/03_df_rows.png 'records count')
 
 ### Q3. Laptop brands
 
@@ -68,11 +74,15 @@ How many laptop brands are presented in the dataset?
 
 - 27
 
+![brands](../../assets/01-intro/04_brands.png 'brands')
+
 ### Q4. Missing values
 
 How many columns in the dataset have missing values?
 
 - 3
+
+![missing values](../../assets/01-intro/05_missing_values.png 'missing values')
 
 ### Q5. Maximum final price
 
@@ -83,6 +93,8 @@ What's the maximum final price of Dell notebooks in the dataset?
 |      | Laptop                                                                       | Status   | Brand   | Model     | CPU           |   RAM |   Storage | Storage type   | GPU       |   Screen | Touch   |   Final Price |
 |-----:|:-----------------------------------------------------------------------------|:---------|:--------|:----------|:--------------|------:|----------:|:---------------|:----------|---------:|:--------|--------------:|
 | 1335 | Dell Precision 5770 Intel Core i7-12700H/16GB/512GB SSD/RTX A2000/17" Táctil | New      | Dell    | Precision | Intel Core i7 |    16 |       512 | SSD            | RTX A2000 |       17 | Yes     |          3936 |
+
+![max final price](../../assets/01-intro/06_max_final_price.png 'max final price')
 
 ### Q6. Median value of Screen
 
@@ -96,6 +108,8 @@ Has it changed?
 > Hint: refer to existing `mode` and `median` functions to complete the task.
 
 - No
+
+![median](../../assets/01-intro/07_median.png 'median')
 
 ### Q7. Sum of weights
 
@@ -111,6 +125,10 @@ Has it changed?
 > **Note**: You just implemented linear regression. We'll talk about it in the next lesson.
 
 - 91.30
+
+![sum of weights 01](../../assets/01-intro/08.1_lin_reg.png 'sum of weights 01')
+
+![sum of weights 02](../../assets/01-intro/08.2_lin_reg.png 'sum of weights 02')
 
 ## Submit the results
 
