@@ -60,50 +60,41 @@ laptops_df.head()
 
 How many records are in the dataset?
 
-- 12
-- 1000
 - 2160
-- 12160
 
 ### Q3. Laptop brands
 
 How many laptop brands are presented in the dataset?
 
-- 12
 - 27
-- 28
-- 2160
 
 ### Q4. Missing values
 
 How many columns in the dataset have missing values?
 
-- 0
-- 1
-- 2
 - 3
 
 ### Q5. Maximum final price
 
 What's the maximum final price of Dell notebooks in the dataset?
 
-- 869
-- 3691
-- 3849
 - 3936
+
+|      | Laptop                                                                       | Status   | Brand   | Model     | CPU           |   RAM |   Storage | Storage type   | GPU       |   Screen | Touch   |   Final Price |
+|-----:|:-----------------------------------------------------------------------------|:---------|:--------|:----------|:--------------|------:|----------:|:---------------|:----------|---------:|:--------|--------------:|
+| 1335 | Dell Precision 5770 Intel Core i7-12700H/16GB/512GB SSD/RTX A2000/17" Táctil | New      | Dell    | Precision | Intel Core i7 |    16 |       512 | SSD            | RTX A2000 |       17 | Yes     |          3936 |
 
 ### Q6. Median value of Screen
 
-1. Find the median value of `Screen` column in the dataset.
-2. Next, calculate the most frequent value of the same `Screen` column.
-3. Use `fillna` method to fill the missing values in `Screen` column with the most frequent value from the previous step.
-4. Now, calculate the median value of `Screen` once again.
+1. Find the median value of `Screen` column in the dataset. `15.6`
+2. Next, calculate the most frequent value of the same `Screen` column. `15.6`
+3. Use `fillna` method to fill the missing values in `Screen` column with the most frequent value from the previous step. `15.6`
+4. Now, calculate the median value of `Screen` once again. `15.6`
 
 Has it changed?
 
 > Hint: refer to existing `mode` and `median` functions to complete the task.
 
-- Yes
 - No
 
 ### Q7. Sum of weights
@@ -119,11 +110,7 @@ Has it changed?
 
 > **Note**: You just implemented linear regression. We'll talk about it in the next lesson.
 
-- 0.43
-- 45.29
-- 45.58
 - 91.30
-
 
 ## Submit the results
 
