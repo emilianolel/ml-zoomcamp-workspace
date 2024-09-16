@@ -15,6 +15,11 @@ You can get the version information using the `__version__` field:
 pd.__version__
 ```
 
+Answer:
+```
+2.2.2
+```
+
 ### Getting the data 
 
 For this homework, we'll use the Laptops Price dataset. Download it from 
