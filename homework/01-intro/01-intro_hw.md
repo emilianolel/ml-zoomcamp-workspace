@@ -35,6 +35,27 @@ Or just open it with your browser and click "Save as...".
 
 Now read it with Pandas.
 
+```python
+laptops_df = pd.read_csv('data/laptops.csv')
+```
+```python
+laptops_df.head()
+```
+
+|      | Laptop                                                                                                                            | Status      | Brand            | Model          | CPU                   |   RAM |   Storage | Storage type   | GPU                |   Screen | Touch   |   Final Price |
+|-----:|:----------------------------------------------------------------------------------------------------------------------------------|:------------|:-----------------|:---------------|:----------------------|------:|----------:|:---------------|:-------------------|---------:|:--------|--------------:|
+|    0 | ASUS ExpertBook B1 B1502CBA-EJ0436X Intel Core i5-1235U/8GB/512GB SSD/15.6"                                                       | New         | Asus             | ExpertBook     | Intel Core i5         |     8 |       512 | SSD            | nan                |    15.6  | No      |       1009    |
+|    1 | Alurin Go Start Intel Celeron N4020/8GB/256GB SSD/15.6"                                                                           | New         | Alurin           | Go             | Intel Celeron         |     8 |       256 | SSD            | nan                |    15.6  | No      |        299    |
+|    2 | ASUS ExpertBook B1 B1502CBA-EJ0424X Intel Core i3-1215U/8GB/256GB SSD/15.6"                                                       | New         | Asus             | ExpertBook     | Intel Core i3         |     8 |       256 | SSD            | nan                |    15.6  | No      |        789    |
+|    3 | MSI Katana GF66 12UC-082XES Intel Core i7-12700H/16GB/1TB SSD/RTX3050/15.6"                                                       | New         | MSI              | Katana         | Intel Core i7         |    16 |      1000 | SSD            | RTX 3050           |    15.6  | No      |       1199    |
+|    4 | HP 15S-FQ5085NS Intel Core i5-1235U/16GB/512GB SSD/15.6"                                                                          | New         | HP               | 15S            | Intel Core i5         |    16 |       512 | SSD            | nan                |    15.6  | No      |        669.01 |
+|    5 | MSI Crosshair 17 C12VF-264XES Intel Core i7-12650H/32GB/1TB SSD/RTX 4060/17.3"                                                    | New         | MSI              | Crosshair      | Intel Core i7         |    32 |      1000 | SSD            | RTX 4060           |    17.3  | No      |       1699    |
+|    6 | Lenovo Thinkpad E14 Gen 4 AMD Ryzen 5 5625U/8GB/256GB SSD/14"                                                                     | New         | Lenovo           | ThinkPad       | AMD Ryzen 5           |     8 |       256 | SSD            | nan                |    14    | No      |        909    |
+|    7 | ASUS VivoBook 15 F515JA-EJ2882W Intel Core i7-1065G7/8GB/512GB SSD/15.6"                                                          | New         | Asus             | VivoBook       | Intel Core i7         |     8 |       512 | SSD            | nan                |    15.6  | No      |        809.01 |
+|    8 | Medion Akoya E15415 Intel Core i5-10210U/8GB/256GB SSD/15.6"                                                                      | New         | Medion           | Akoya          | Intel Core i5         |     8 |       256 | SSD            | nan                |    15.6  | No      |        519    |
+|    9 | HP Victus 16-d1038ns Intel Core i7-12700H/16GB/512GB SSD/RTX 3050/16.1"                                                           | New         | HP               | Victus         | Intel Core i7         |    16 |       512 | SSD            | RTX 3050           |    16.1  | No      |       1149    |
+|   10 | Lenovo V15 IGL Intel Celeron N4020/8GB/256 GB SSD/15.6"                                                                           | New         | Lenovo           | V15            | Intel Celeron         |     8 |       256 | SSD            | nan                |    15.6  | No      |        349    |
+
 ### Q2. Records count
 
 How many records are in the dataset?
